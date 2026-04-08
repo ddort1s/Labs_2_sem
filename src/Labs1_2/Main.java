@@ -2,22 +2,17 @@ package Labs1_2;
 
 import java.util.Scanner;
 
-public class Main {
-
+public class Main{
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
 
-        try {
-            String name = scanner.next();
-            int age = scanner.nextInt();
+        System.out.println();
+        String sort = scanner.nextLine();
 
-            Grapes grapes = new Grapes(name, age);
+        System.out.println();
+        int age = scanner.nextInt();
 
-            System.out.println(grapes);
-
-        } catch (IllegalArgumentException e) {
-            System.out.println("Error in field: " + e.getMessage());
-        }
+        GrapeTree grapeTree = new GrapeTree(sort, age);
+        System.out.println(grapeTree.getInfo());
     }
 }
