@@ -1,4 +1,4 @@
-package Labs1_1;
+package Labs8_1_1;
 
 import java.util.Arrays;
 
@@ -8,17 +8,17 @@ public class Triangle{
     private Integer sideC;
 
     public Triangle(Integer sideC, Integer sideB, Integer sideA) {
-        this.sideC = sideC;
-        this.sideB = sideB;
-        this.sideA = sideA;
+        this.sideC = Math.abs(sideC);
+        this.sideB = Math.abs(sideB);
+        this.sideA = Math.abs(sideA);
     }
 
-    public Integer getPerimetr(){
+    public Integer getPerimeter(){
         return sideA+sideB+sideC;
     }
 
     public Integer getArea() {
-        double p = (sideA + sideB + sideC) / 2.0;
+        double p = getPerimeter() / 2.0;
         double result = Math.sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));
         return (int) Math.round(result);
     }

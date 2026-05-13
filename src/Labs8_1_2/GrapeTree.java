@@ -1,10 +1,17 @@
-package Labs1_2;
+package Labs8_1_2;
 
 public class GrapeTree {
     private String sort;
     private Integer age;
 
     public GrapeTree(String sort, int age) {
+        if (sort == null || sort.isBlank() || sort.trim().length() < 3) {
+            throw new IllegalArgumentException("Invalid sort name! Expected length at least 3 symbols.");
+        }
+
+        if (age < 0) {
+            throw new IllegalArgumentException("Invalid age! Age cannot be negative.");
+        }
         this.sort = sort;
         this.age = age;
     }
