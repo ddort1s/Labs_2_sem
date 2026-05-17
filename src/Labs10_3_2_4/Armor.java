@@ -1,10 +1,10 @@
 package Labs10_3_2_4;
 
 public interface Armor {
-    Integer MIN_VALUE = 5;
-    Integer MAX_VALUE = 50;
+    int MIN_VALUE = 5;
+    int MAX_VALUE = 50;
 
+    int protect(int damage);
     boolean isBroken();
-    Integer protect(Integer value);
-    Integer getPosition();
+    int getPosition();
 }
